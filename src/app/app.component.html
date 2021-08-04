@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 class="bg-success">
+    Welcome to {{ title }}!
+  </h1>
+  <form #form="ngForm" (ngSubmit)="saveTrainee(form)">
+  <table class="table table-sm">
+    <tr>
+        <td> Name </td>
+        <td>
+            <input  type="text" name="name" [(ngModel)]="trainee.name">
+        </td>
+    </tr>
+    <tr>
+      <td> Course </td>
+        <td>
+            <input type="text" name='course' [(ngModel)]="trainee.course">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+          <button type="submit" class="btn btn-success" >Save </button> &nbsp;
+          <button type="reset" class="btn btn-danger" >Reset </button>
+        </td>
+    </tr>
+  </table>
+</form>
+
+ <table class="table table-border">
+  <tr>
+    <td>id</td>
+    <td>Name</td>
+    <td>Course</td>
+    <td>Action</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let trainee of getTrainees(); let i = index" >
+    <td>{{i + 1}}</td>
+    <td>{{trainee.name}}</td>
+    <td>{{trainee.course}}</td>
+    <td><button class="btn btn-success" (click)="UpdateTrainee(trainee.id)">Edit </button></td>
+    <td><button class="btn btn-success" (click)="DeleteTrainee(trainee.id)">Delete </button></td>
+  </tr>
+
+ </table>
+
+
+
+
+</div>
+
