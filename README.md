@@ -1,7 +1,7 @@
 Deploy - > 
 #### step 1 :- download software and install iis hosting getting url:  https://www.iis.net/downloads/microsoft/url-rewrite
 
-#### step 2 :- 
+#### step 2 :- web.config
 ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <configuration>
